@@ -39,15 +39,15 @@ html {
 
 .welcomeText {
     position: absolute;
-    top: 650px;
-    left: 800px;
+    top: 450px;
+    left: 530px;
 }
 
 #go-low {
     color: none;
     position: absolute;
-    top: 750px;
-    left: 905px;
+    top: 550px;
+    left: 640px;
 }
 
 .welcome-img {
@@ -58,10 +58,14 @@ html {
     margin: auto;
 }
 
+#navBarSearchForm {
+	width: 200px;
+}
+
 #head {
     position: absolute;
-    top: 930px;
-    left: 800px;
+    top: 600px;
+    left: 550px;
 }
 
 /* Products */
