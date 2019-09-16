@@ -171,12 +171,12 @@
                 aria-controls="Discription" aria-selected="true">Discription</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-                aria-selected="false">Profile</a>
+              <a class="nav-link" id="add-info-tab" data-toggle="tab" href="#add-info" role="tab" aria-controls="add-info"
+                aria-selected="false">Additional Information</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-                aria-selected="false">Contact</a>
+              <a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
+                aria-selected="false">Review</a>
             </li>
           </ul>
           <div class="tab-content" id="myTabContent">
@@ -186,47 +186,35 @@
               asperiores sapiente, est expedita eligendi accusamus debitis labore, sint ducimus molestiae aut! Eaque
               delectus quam rerum reiciendis deserunt beatae impedit illum quia voluptates.
             </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Lorem, ipsum dolor sit
+            <div class="tab-pane fade" id="add-info" role="tabpanel" aria-labelledby="add-info-tab">Lorem, ipsum dolor sit
               amet consectetur adipisicing elit. Distinctio, labore excepturi! Sint tenetur porro veniam dolore maxime
               culpa nemo repellendus!</div>
-            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
               <!-- st -->
               <div class="container">
                 <div class="row">
-                  <div class="media comment-box mt-4">
-                    <div class="media-left">
-                      <a href="#">
-                        <img class="img-fluid user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">John Doe</h4>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.</p>
-                    </div>
-                  </div>
-                  <div class="media comment-box mt-4">
-                    <div class="media-left">
-                      <a href="#">
-                        <img class="img-fluid user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                      </a>
-                    </div>
-                    <div class="media-body">
-                      <h4 class="media-heading">John Doe</h4>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.</p>
+                  <!-- add comment -->
+                  <div class="col">
+                    <div class="row bootstrap snippets">
+                      <div class="col-md-6 col-md-offset-2 col-lg-12">
+                          <div class="comment-wrapper">
+                              <div class="panel panel-info">
+                                <div class="panel-body">
+                                        <textarea class="form-control" placeholder="write a comment..." rows="3" id = "comment-section" ></textarea>
+                                        <br>
+                                        <button type="button" class="btn btn-info pull-right" id = "btn">Post</button>
+                                        <div class="clearfix"></div>
+                                        <hr>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
                     </div>
                   </div>
+                  <!-- add comment End-->
+                </div>
+                <div class="wrapper" id = "ok">
+
                 </div>
               </div>
               <!-- ed -->
@@ -242,6 +230,9 @@
       <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+      </script>
+      <script src="../js/products.js"></script>
+
       </script>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"

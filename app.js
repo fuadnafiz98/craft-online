@@ -15,7 +15,6 @@ let buttonsDOM = [];
 class Products {
     async getProducts() {
         try {
-
             let result = await fetch('products.json');
             let data = await result.json();
 
@@ -51,17 +50,17 @@ class UI {
             result += `
                 <article class = "product">
                     <p class = "img-container">
-                    <a href = "#" >
+                    <a href = "./views/products.html" >
                     <img src = ${product.image} alt = "product" class = "product-img"
-                herf = "#" >
+                herf = "./views/products.html" >
                     </a>
                     </p>
-                    <h3> ${product.title} </h3> 
-                    <h4 > ${product.price} $ </h4> 
+                    <h3> ${product.title} </h3>
+                    <h4 > ${product.price} $ </h4>
                     <button class = "cart-btn" data-id =${product.id} >
                     <i class = "fas fa-shopping-cart"> </i>
                     Add to cart
-                    </button> 
+                    </button>
                     </article>
             `;
         });
