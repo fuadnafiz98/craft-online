@@ -65,7 +65,7 @@ html {
 .products-center {
     width: 90vw;
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 1170px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     grid-column-gap: 2.5rem;
@@ -124,7 +124,7 @@ html {
         margin: 0 auto;
         max-width: 960px;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         grid-column-gap: 2.0rem;
         grid-row-gap: 4.0rem;
     }

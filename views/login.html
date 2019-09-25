@@ -17,22 +17,32 @@
 <body>
 
     <div class="container">
+        <div class="alert alert-success" role="alert" id="right-password" style="display: none;">
+            Log In Successful!
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show mt-5" role="alert" id="wrong-password"
+            style="display: none;">
+            <strong>Wrong UserName or Password!</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
         <div class="row">
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                 <div class="card card-signin my-5">
                     <div class="card-body">
                         <h5 class="card-title text-center">Sign In</h5>
-                        <form class="form-signin">
+                        <form class="form-signin" id="signin-form">
                             <div class="form-label-group">
-                                <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                                <input type="email" id="inputEmail" class="form-control" placeholder="example@email.com"
                                     required autofocus>
-                                <label for="inputEmail">Email address</label>
+                                <label for="inputEmail" class="mt-2">Email address</label>
                             </div>
 
                             <div class="form-label-group">
-                                <input type="password" id="inputPassword" class="form-control" placeholder="Password"
+                                <input type="password" id="inputPassword" class="form-control" placeholder="**********"
                                     required>
-                                <label for="inputPassword">Password</label>
+                                <label for="inputPassword" class="mt-2">Password</label>
                             </div>
 
                             <div class="custom-control custom-checkbox mb-3">
@@ -43,7 +53,7 @@
                                 in</button>
                             <div class="mt-4">
                                 <div class="d-flex justify-content-center links">
-                                    Don't have an account? <a href="./resister.html" class="ml-2">Sign Up</a>
+                                    Don't have an account? <a href="./resister.html" class="ml-2">Resister</a>
                                 </div>
                                 <div class="d-flex justify-content-center links">
                                     <a href="#">Forgot your password?</a>
@@ -56,15 +66,26 @@
         </div>
     </div>
 
+    <!-- FireBase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+
+
+    <!-- FireBase End-->
+
+
+    <script src="../auth.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+        </script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+var k = 0;
 const cartBtn = document.querySelector(".shop-btn");
 const closeCartBtn = document.querySelector(".close-cart");
 const clearCartBtn = document.querySelector(".clear-cart");
@@ -15,6 +16,7 @@ let buttonsDOM = [];
 class Products {
     async getProducts() {
         try {
+
             let result = await fetch('products.json');
             let data = await result.json();
 
@@ -47,20 +49,22 @@ class UI {
     displayProducts(products) {
         let result = '';
         products.forEach(product => {
+            // console.log(product.title);
+            let mes = product.title;
             result += `
                 <article class = "product">
                     <p class = "img-container">
-                    <a href = "./views/products.html" >
+                    <a href = "#">
                     <img src = ${product.image} alt = "product" class = "product-img"
-                herf = "./views/products.html" >
+                        data-id =${product.id} onclick = "own(this)">
                     </a>
                     </p>
-                    <h3> ${product.title} </h3>
-                    <h4 > ${product.price} $ </h4>
+                    <h3> ${product.title} </h3> 
+                    <h4 > ${product.price} $ </h4> 
                     <button class = "cart-btn" data-id =${product.id} >
                     <i class = "fas fa-shopping-cart"> </i>
                     Add to cart
-                    </button>
+                    </button> 
                     </article>
             `;
         });

@@ -17,11 +17,11 @@
 <body>
     <div class="row mt-5">
         <div class="col-md-6 m-auto">
-            <div class="card card-body">
+            <div class="card card-body" id="modal-signup">
                 <h1 class="text-center mb-3">
                     <i class="fas fa-user-plus fa-1x"></i> Register
                 </h1>
-                <form action="/users/register" method="POST">
+                <form id='signup-form'>
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="name" id="name" name="name" class="form-control" placeholder="Enter Name" />
@@ -40,7 +40,7 @@
                         <input type="password" id="password2" name="password2" class="form-control"
                             placeholder="Confirm Password" />
                     </div>
-                    <button type="submit" class="btn btn-lg btn-dark btn-block">
+                    <button type="submit" class="btn btn-lg btn-dark btn-block" id="submit">
                         Register
                     </button>
                 </form>
@@ -49,19 +49,31 @@
                         Already Have an Account? <a href="./login.html" class="ml-2">log in</a>
                     </div>
                 </div>
+                <div class="mt-4">
+                    <div class="d-flex justify-content-center links">
+                        Already Have an Account? <a href="#" class="ml-2" id='navbar-logout'>log out</a>
+                    </div>
+                </div>
                 </p>
             </div>
         </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+
+
+    <script src="../auth.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+        </script>
 </body>
 
 </html>
