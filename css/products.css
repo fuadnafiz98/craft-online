@@ -1,0 +1,170 @@
+* {
+  font-family: 'Poppins',
+    sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.mar-right {
+  margin-right: 15%;
+}
+
+.form-inline * {
+  font-size: 10px;
+}
+
+.fa-search {
+  font-size: 20px;
+}
+
+.head {
+  text-align: center;
+  margin: auto;
+  padding-top: 200px;
+  /* background-color: black; */
+}
+
+#logo {
+  /* background-color: red; */
+  font-size: 130%;
+  font-weight: bold;
+  margin-right: 200px;
+}
+
+.navbar {
+  box-shadow: 0 8px 6px -6px rgb(211, 211, 211);
+}
+
+.pro-img {
+  height: 425px;
+  width: 580px;
+  border-radius: 1%;
+  box-shadow: 0 6px 6px rgb(211, 211, 211),
+    0 6px 6px rgb(211, 211, 211);
+}
+
+.btn-space {
+  margin-right: 10%;
+}
+
+.mar-top {
+  margin-top: 10%;
+}
+
+.checked {
+  color: orange;
+}
+
+/* cm st */
+
+/* CSS Test begin */
+.comment-box {
+  margin-top: 30px !important;
+}
+
+/* CSS Test end */
+
+.comment-box img {
+  width: 50px;
+  height: 50px;
+}
+
+.comment-box .media-left {
+  padding-right: 10px;
+  width: 65px;
+}
+
+.comment-box .media-body p {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.comment-box .media-body .media p {
+  margin-bottom: 0;
+}
+
+.comment-box .media-heading {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 7px 10px;
+  position: relative;
+  margin-bottom: -1px;
+}
+
+.comment-box .media-heading:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-width: 1px 0 0 1px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 10px;
+  left: -6px;
+}
+
+/* cm ed */
+footer {
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.payment {
+  font-size: 45px;
+  width: 40px;
+  text-decoration: none !important;
+  color:black;
+  background-color: #fff;
+}
+
+.payment:hover {
+  opacity: 0.8;
+  color:black;
+  background-color: #fff;
+}
+
+.fa-cc-mastercard {
+  color:#0a3a82;
+}
+
+
+.fa-cc-visa {
+  color:#0157a2;
+}
+.fa-paypal{
+
+  color:#253B80;
+}
+
+.social-icons {
+  font-size: 35px;
+  text-decoration: none !important;
+}
+
+.social-icons:hover {
+  opacity: 0.8;
+  text-decoration: none !important;
+}
+.fa-facebook {
+  color: darkblue;
+  font-size: 35px;
+  text-align:   center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa-instagram {
+  color: #d6249f;
+}
+.fa-pinterest {
+  color : red;
+}
+

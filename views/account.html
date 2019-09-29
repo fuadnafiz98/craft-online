@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Account</title>
+    <link rel="stylesheet" href="../css/account.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0b0f4c8001.js"></script>
+    <link rel="shortcut icon" type="image/png" href="../img/clay.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+        <div class="container justify-content-center">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/clay.png" width="25" height="25" alt="">
+            </a>
+
+            <ul class="nav navbar-nav flex-fill justify-content-center">
+                <li class="nav-item active"><a class="nav-link" id="logo" href="../index.html">Crafts Online</a></li>
+            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav mar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Catagories
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./catagory.html" onclick="findCat(1)">Wood</a>
+                            <a class="dropdown-item" href="./catagory.html" onclick="findCat(2)">Glass</a>
+                            <a class="dropdown-item" href="./catagory.html" onclick="findCat(3)">Clay</a>
+                            <a class="dropdown-item" href="./catagory.html" onclick="findCat(4)">Paper</a>
+                            <a class="dropdown-item" href="./catagory.html" onclick="findCat(5)">Uncatagorized</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact Us</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./account.html">My Account</a>
+                            <a class="dropdown-item" href="./feedback.html" id="navbar-feedback"
+                                style="display : block;">User
+                                Feedback</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="./login.html" id="navbar-signin"
+                                style="display : block;">Sign in</a>
+                            <a class="dropdown-item" href="../index.html" id="navbar-logout" onclick="LogOut()"
+                                style="display : block;">log
+                                out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div class="container emp-profile">
+        <form>
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-6">
+                    <div class="profile-head">
+                        <h5>
+                            User Account
+                        </h5>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                    aria-controls="home" aria-selected="true">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                    aria-controls="profile" aria-selected="false">Update</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 ">
+                    <div class="profile-img">
+                        <img src="../img/images.png" alt="" />
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>User Name</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="user-name">ABC</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Name</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="name">Kshiti Ghelani</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Email</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="email">kshitighelani@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Phone</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="phone">123 456 7890</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Mobile</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="mobile">Mobile Number</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Address</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="address">Some Address</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>City</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="city">Some City</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Postal Code</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="pcode">Some Code</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <!-- edit st -->
+                            <form class="form" id="registrationForm">
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                        <label for="first_name">
+                                            <h4>Name</h4>
+                                        </label>
+                                        <input type="text" class="form-control" name="name" id="edit_name"
+                                            placeholder="first name" title="enter your name if any.">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                        <label for="phone">
+                                            <h4>Phone</h4>
+                                        </label>
+                                        <input type="text" class="form-control" name="phone" id="edit_phone"
+                                            placeholder="enter phone" title="enter your phone number if any.">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                        <label for="mobile">
+                                            <h4>Mobile</h4>
+                                        </label>
+                                        <input type="text" class="form-control" name="mobile" id="edit_mobile"
+                                            placeholder="enter mobile number" title="enter your mobile number if any.">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+
+                                    <div class="col-xs-6">
+                                        <label for="email">
+                                            <h4>Address</h4>
+                                        </label>
+                                        <input type="email" class="form-control" id="edit_address"
+                                            placeholder="Enter your Address" title="enter a location">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+
+                                    <div class="col-xs-6">
+                                        <label for="email">
+                                            <h4>City</h4>
+                                        </label>
+                                        <input type="email" class="form-control" id="edit_city" placeholder="Enter City"
+                                            title="enter a location">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+
+                                    <div class="col-xs-6">
+                                        <label for="code">
+                                            <h4>Postal Code</h4>
+                                        </label>
+                                        <input type="text" class="form-control" id="edit_code"
+                                            placeholder="Enter Postal Code" title="enter a location">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <br>
+                                        <button class="btn btn-lg btn-dark" type="submit" id="submit"> Update </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- edit end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- FireBase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+    <!-- FireBase End-->
+
+    <script src="../firebase.js"></script>
+    <script src="../account.js"></script>
+
+    <script>
+        auth.onAuthStateChanged(user => {
+            console.log(user);
+            if (user) {
+                document.getElementById('navbar-logout').style.display = "block";
+                document.getElementById('navbar-signin').style.display = "none";
+                if (user.email == 'admin@gmail.com') {
+                    console.log(user.email);
+                    document.getElementById('navbar-feedback').style.display = "block";
+                } else {
+                    document.getElementById("navbar-feedback").style.display = "none";
+                }
+            } else {
+                document.getElementById('navbar-logout').style.display = "none";
+                document.getElementById('navbar-signin').style.display = "block";
+                document.getElementById("navbar-feedback").style.display = "none";
+            }
+        })
+
+        function LogOut() {
+            auth.signOut().then(() => {
+                console.log('logouting!');
+            });
+        }
+
+        document.getElementById("navbar-logout").addEventListener('click', () => {
+            LogOut();
+
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

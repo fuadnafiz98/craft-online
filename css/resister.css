@@ -1,0 +1,23 @@
+* {
+    font-family: 'Roboto',
+        sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.card-body {
+    position: absolute;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgb(232, 232, 232),
+        0 3px 6px rgb(232, 232, 232);
+}
+
+.ok {
+    /* border: none; */
+    color: black;
+}

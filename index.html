@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="css/style.css">
+  <title>Craft Online</title>
+  <link rel="shortcut icon" type="image/png" href="./img/clay.png">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0b0f4c8001.js"></script>
+
+</head>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+    <div class="container justify-content-center">
+      <a class="navbar-brand" href="./index.html">
+        <img src="./img/clay.png" width="25" height="25" alt="">
+      </a>
+
+      <ul class="nav navbar-nav flex-fill justify-content-center">
+        <li class="nav-item active"><a class="nav-link" id="logo" href="./index.html">Crafts Online</a></li>
+      </ul>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav mar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item"></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Catagories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="./views/catagory.html" onclick="findCat(1)">Wood</a>
+              <a class="dropdown-item" href="./views/catagory.html" onclick="findCat(2)">Glass</a>
+              <a class="dropdown-item" href="./views/catagory.html" onclick="findCat(3)">Clay</a>
+              <a class="dropdown-item" href="./views/catagory.html" onclick="findCat(4)">Paper</a>
+              <a class="dropdown-item" href="./views/catagory.html" onclick="findCat(5)">Uncategorized</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./views/contact.html">Contact Us</a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"><i class="fas fa-user"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="./views/account.html">My Account</a>
+              <a class="dropdown-item" href="./views/feedback.html" id="navbar-feedback" style="display : block;">User
+                Feedback</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="./views/login.html" id="navbar-signin" style="display : block;">Sign in</a>
+              <a class="dropdown-item" href="./" id="navbar-logout" onclick="LogOut()" style="display : block;">log
+                out</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-light"> <i class="shop-btn fas fa-shopping-cart"></i> </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<main>
+
+  <!-- welcome st -->
+  <div class="wrapper">
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <h1>Craft Collection</h1>
+    <br>
+    <button type="button" class="btn btn-dark btn-lg" id="go-low" onclick="window.location.href = '#head'">Shop
+      Now</button>
+  </div>
+  <br><br><br>
+  <br><br><br>
+  <h1 class="head" id="head"> Our Products </h1>
+  </div>
+  </section>
+  <!-- end of welcome page -->
+
+
+  <!-- welcome end -->
+
+  <!-- All products -->
+  <section class="products">
+    <div class="products-center" id="img-product">
+    </div>
+  </section> <!-- end of All products -->
+  <!-- cart -->
+
+
+  <div class="cart-overlay">
+    <div class="cart">
+      <span class="close-cart">
+        <i class="fas fa-window-close"></i>
+      </span>
+      <h2>Your Cart</h2>
+      <div class="cart-content">
+      </div>
+      <div class="cart-footer">
+        <h6>Your Total : $ <span class="cart-total">0</span></h6>
+        <button class="clear-cart btn btn-dark btn-lg mt-3">Clear Cart</button>
+      </div>
+    </div>
+
+  </div>
+  <!-- cart end -->
+
+</main>
+
+<!-- FireBase -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+<!-- FireBase End-->
+<script src="./firebase.js"></script>
+<script src="./app.js"></script>
+<!-- <script src="./product.js"></script> -->
+<script src="find_id.js"></script>
+<script src="./auth.js"></script>
+<script src="chkindex.js"></script>
+<script src="find_cat.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<body>
+  <footer>
+    <p>Craft Online &copy; 2019</p>
+  </footer>
+</body>
+
+</html>

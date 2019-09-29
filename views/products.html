@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" id="total">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="../css/products.css" />
+    <title>Craft Online</title>
+    <link rel="shortcut icon" type="image/png" href="../img/clay.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/0b0f4c8001.js"></script>
+    <script src="../find_cat.js"></script>
+    <link rel="shortcut icon" type="image/png" href="./img/clay.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+</html>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+        <div class="container justify-content-center">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/clay.png" width="25" height="25" alt="">
+            </a>
+
+            <ul class="nav navbar-nav flex-fill justify-content-center">
+                <li class="nav-item active"><a class="nav-link" id="logo" href="../index.html">Crafts Online</a></li>
+            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav mar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Catagories
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./catagory.html" onclick="findCat(1)">Wood</a>
+                            <a class="dropdown-item" href="./catagory.html" onclick="findCat(2)">Glass</a>
+                            <a class="dropdown-item" href="./catagory.html" onclick="findCat(3)">Clay</a>
+                            <a class="dropdown-item" href="./catagory.html" onclick="findCat(4)">Paper</a>
+                            <a class="dropdown-item" href="./catagory.html" onclick="findCat(5)">Uncatagorized</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact Us</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./account.html">My Account</a>
+                            <a class="dropdown-item" href="./feedback.html" id="navbar-feedback"
+                                style="display : block;">User
+                                Feedback</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="./login.html" id="navbar-signin"
+                                style="display : block;">Sign in</a>
+                            <a class="dropdown-item" href="../index.html" id="navbar-logout"
+                                style="display : block;">log
+                                out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<body>
+
+    <div class="container">
+
+        <div class="wrapper2" id="main-product">
+            <div class="row mar-top">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 mr-3">
+                    <h1>Product-Details</h1>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <nav aria-label="breadcrumb bg-white ">
+                        <ol class="breadcrumb bg-white ">
+                            <li class="breadcrumb-item"><a class="text-muted" href=" #">Catagories</a></li>
+                            <li class="breadcrumb-item"><a class="text-muted" href="#" id="single-catagory">Product</a>
+                            </li>
+                            <li class="breadcrumb-item active text-dark" aria-current="page">Product-Name</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-md-4 mr-3">
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-8">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../img/mike-kenneally-o14nNEbLa-s-unsplash.jpg" alt="pro-img"
+                                    class="d-block w-100 pro-img z-depth-2">
+                                <!-- <img src="..." class="d-block w-100" alt="..."> -->
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/mike-kenneally-o14nNEbLa-s-unsplash.jpg" alt="pro-img"
+                                    class="d-block w-100 pro-img z-depth-2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/mike-kenneally-o14nNEbLa-s-unsplash.jpg" alt="pro-img"
+                                    class="d-block w-100 pro-img z-depth-2">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h2>Product Name</h2>
+                    <h6>Product Id : 123890-DFD</h6>
+                    <div class="row mt-4">
+                        <div class="col-2 mr-3">
+                            <h5>Review:</h5>
+                        </div>
+                        <div class="col md-2 mr-4">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span><br>
+                        </div>
+                        <div class="col md-8"></div>
+                    </div>
+                    <h1 class="mt-4">25.25$</h1><br>
+                    <button type="button" class="btn btn-lg btn-dark btn-space">Buy Now</button>
+                    <button type="button" class="btn btn-lg btn-dark btn-space">Add to Cart</button>
+                    <div class="row mt-5">
+                        <h4 class="ml-3 mt-2">Pay With</h4>
+                        <div class="col md-2 mr-4">
+                            <a href="#" class="payment fab fa-cc-visa ml-2"></a>
+                            <a href="#" class="payment fab fa-cc-mastercard ml-4"></a>
+                            <a href="#" class="payment fab fa-paypal ml-4"></a>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <h3 class="ml-3 mt-2">Share</h3>
+                        <div class="col md-2 mr-4">
+                            <a href="#" class="social-icons fab fa-facebook mr-2"></a>
+                            <a href="#" class="social-icons fab fa-twitter mr-2"></a>
+                            <a href="#" class="social-icons fab fa-instagram mr-2"></a>
+                            <a href="#" class="social-icons fab fa-pinterest mr-2"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-danger alert-dismissible" style="margin-top: 10%;" role="alert" id="alart-msg">
+            Please <strong><a href="./login.html" class="alert-link">Login</a> </strong>to Comment!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col mt-4">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="Discription-tab" data-toggle="tab" href="#Discription" role="tab"
+                            aria-controls="Discription" aria-selected="true">Discription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Additional-Information-tab" data-toggle="tab"
+                            href="#Additional-Information" role="tab" aria-controls="Additional-Information"
+                            aria-selected="false">Additional Information</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="comment-tab" data-toggle="tab" href="#comment" role="tab"
+                            aria-controls="comment" aria-selected="false">Comment</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="Discription" role="tabpanel"
+                        aria-labelledby="Discription-tab">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos cupiditate saepe eos
+                        nostrum, odit
+                        sunt suscipit adipisci reprehenderit, doloribus amet autem aliquam. Commodi velit autem
+                        corporis. Beatae
+                        asperiores sapiente, est expedita eligendi accusamus debitis labore, sint ducimus molestiae aut!
+                        Eaque
+                        delectus quam rerum reiciendis deserunt beatae impedit illum quia voluptates.
+                    </div>
+                    <div class="tab-pane fade" id="Additional-Information" role="tabpanel"
+                        aria-labelledby="Additional-Information-tab">Lorem, ipsum
+                        dolor sit
+                        amet consectetur adipisicing elit. Distinctio, labore excepturi! Sint tenetur porro veniam
+                        dolore maxime
+                        culpa nemo repellendus!</div>
+                    <div class="tab-pane fade" id="comment" role="tabpanel" aria-labelledby="comment-tab">
+                        <!-- st -->
+                        <div class="container">
+                            <div class="row">
+                                <!-- add comment -->
+                                <div class="col">
+                                    <div class="row bootstrap snippets">
+                                        <div class="col-md-6 col-md-offset-2 col-lg-12">
+                                            <div class="comment-wrapper">
+                                                <div class="panel panel-info">
+                                                    <div class="panel-body">
+                                                        <textarea class="form-control" placeholder="write a comment..."
+                                                            rows="4" id="comment-section"></textarea>
+                                                        <br>
+                                                        <button type="button" class="btn btn-info pull-right"
+                                                            id="btn">Post</button>
+                                                        <div class="clearfix"></div>
+                                                        <hr>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- add comment End-->
+                            </div>
+                            <div class="wrapper" id="ok">
+
+                            </div>
+                        </div>
+                        <!-- ed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- FireBase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+    <!-- FireBase End-->
+    <script src="../firebase.js"></script>
+    <script src="../auth.js"></script>
+    <script src="../productchk.js"></script>
+    <script src="../eee.js"></script>
+    <script src="../comments.js"></script>
+
+
+    <script>
+        auth.onAuthStateChanged(user => {
+            console.log(user);
+            if (user) {
+                document.getElementById('navbar-logout').style.display = "block";
+                document.getElementById('navbar-signin').style.display = "none";
+                if (user.email == 'admin@gmail.com') {
+                    console.log(user.email);
+                    document.getElementById('navbar-feedback').style.display = "block";
+                } else {
+                    document.getElementById("navbar-feedback").style.display = "none";
+                }
+            } else {
+                document.getElementById('navbar-logout').style.display = "none";
+                document.getElementById('navbar-signin').style.display = "block";
+                document.getElementById("navbar-feedback").style.display = "none";
+            }
+        })
+
+        function LogOut() {
+            auth.signOut().then(() => {
+                console.log('logouting!');
+            });
+        }
+
+        document.getElementById("navbar-logout").addEventListener('click', () => {
+            LogOut();
+        });
+    </script>
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+
+</body>
+
+<footer>
+    <p>Craft Online &copy; 2019</p>
+</footer>
