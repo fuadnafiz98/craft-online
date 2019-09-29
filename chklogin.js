@@ -11,7 +11,7 @@ loginForm.addEventListener('submit', (e) => {
         console.log(cred.user);
         document.getElementById("wrong-password").style.display = "none";
         document.getElementById("right-password").style.display = "block";
-        location.href = "http://127.0.0.1:5500/index.html";
+        location.href = "../index.html";
     }).catch(function (error) { // * Edited here
         document.getElementById("wrong-password").style.display = "block";
         // Handle Errors here.

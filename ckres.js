@@ -5,29 +5,23 @@ signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const userName = signupForm['name'].value;
-    const user_Name = signupForm['userName'].value;
     const email = signupForm['email'].value;
     const password = signupForm['password'].value;
-    console.log(email, password);
+    console.log(email, password, userName);
 
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
         localStorage.setItem("user", true);
         signupForm.reset();
-        console.log(cred);
-
         //* testing 
 
-
-
         firebase.auth().onAuthStateChanged(function (user) {
+            console.log(user.uid);
 
             if (user) {
-
-
                 db.collection("account").doc(user.uid).set({
                     Name: userName,
                     Email: email,
-                    User_Name: user_Name,
+                    User_Name: userName,
                     Mobile: "Not Provided",
                     City: "Not Provided",
                     Phone: "Not Provided",
@@ -47,6 +41,10 @@ signupForm.addEventListener('submit', (e) => {
                     var photoURL = user.photoURL;
                     console.log(displayName);
 
+                    // *
+                    window.alert('Resistration Successful!');
+                    location.href = "../index.html";
+
                 }, function (error) {
                     // An error happened.
                 });
@@ -56,7 +54,7 @@ signupForm.addEventListener('submit', (e) => {
 
         //tesing end
     }).catch(function (error) { // * Edited here
-        document.getElementById("wrong-password").style.display = "block";
+        // document.getElementById("wrong-password").style.display = "block";
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
