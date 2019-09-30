@@ -14,7 +14,7 @@ function own(elem) {
                 // *
                 localStorage.setItem("cat", product.catagory);
                 console.log('kkkkk');
-                location.href = "./views/products.html";
+                location.href = "./WebDevCSE-224/views/products.html";
 //                  location.href = "../views/products.html";
                 //     document.getElementById('total').innerHTML = ' ';
                 //     console.log(window.location);
