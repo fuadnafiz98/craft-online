@@ -24,7 +24,13 @@
 html {
     scroll-behavior: smooth;
 }
-
+#user_name {
+  margin-top: 10px;
+  margin-right: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
 .mar-right {
     margin-right: 15%;
 }

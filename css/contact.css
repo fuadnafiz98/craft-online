@@ -18,7 +18,13 @@ html {
 .form-inline * {
   font-size: 10px;
 }
-
+#user_name {
+  margin-top: 10px;
+  margin-right: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
 .fa-search {
   font-size: 20px;
 }

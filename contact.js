@@ -5,6 +5,7 @@ const contactForm = document.querySelector('#contactForm');
 auth.onAuthStateChanged(user => {
     console.log(user);
     if (user) {
+        document.getElementById("user_name").innerHTML = `<a href = "./account.html"  style="text-decoration: none; color:black;">${user.displayName}</a>`;
         console.log('1');
         // var name = document.getElementById("name");
         // var email = document.getElementById("email").value;

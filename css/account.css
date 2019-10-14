@@ -17,6 +17,13 @@
   /* background-color: #E1E2E1; */
 }
 
+#user_name {
+  margin-top: 10px;
+  margin-right: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
 html {
   scroll-behavior: smooth;
 

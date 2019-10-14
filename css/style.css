@@ -14,7 +14,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-color #E1E2E1;
+  /* background-color: #E1E2E1; */
 }
 
 html {
@@ -38,6 +38,14 @@ html {
   margin: auto;
   padding-top: 200px;
   /* background-color: black; */
+}
+
+#user_name {
+  margin-top: 10px;
+  margin-right: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
 }
 
 #logo {

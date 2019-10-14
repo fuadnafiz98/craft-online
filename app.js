@@ -2,6 +2,7 @@ var k = 0;
 const cartBtn = document.querySelector(".shop-btn");
 const closeCartBtn = document.querySelector(".close-cart");
 const clearCartBtn = document.querySelector(".clear-cart");
+const cheakoutCartBtn = document.querySelector(".cheakout-cart");
 const cartDOM = document.querySelector(".cart");
 const cartOverlay = document.querySelector(".cart-overlay");
 const cartTotal = document.querySelector(".cart-total");
@@ -144,6 +145,38 @@ class UI {
         cartDOM.classList.remove('showCart');
     }
     cartLogic() {
+        cheakoutCartBtn.addEventListener('click', () => {
+            firebase.auth().onAuthStateChanged((user) => {
+                if (user) {
+                    var cartStore = localStorage.getItem("cart");
+                    var cartStoreJSON = JSON.parse(cartStore);
+                    var titles = [];
+                    var prices = [];
+                    var ammounts = [];
+                    cartStoreJSON.forEach(cart => {
+                        console.log(cart);
+                        titles.push(cart.title);
+                        prices.push(cart.price);
+                        ammounts.push(cart.ammount);
+                    });
+                    //  ! update || set ?
+
+                    db.collection("CartItems").doc(user.uid).set({
+                        Amount: ammounts,
+                        Items: titles,
+                        Price: prices
+                    }).then(() => {
+                        console.log('Done');
+                        window.alert('Items Cheakout Done!');
+                        this.hideCart();
+                    });
+                } else {
+                    if (window.confirm('Please Login to Cheakout.')) {
+                        window.location.href = './views/login.html';
+                    };
+                }
+            });
+        });
         clearCartBtn.addEventListener('click', () => {
             this.clearCart();
         });
